@@ -29,3 +29,12 @@ This project demonstrates a prompt-driven testing workflow in VS Code that impro
 ### Run tests + generate coverage report
 ```bash
 mvn clean test
+```
+
+## Phase 4 – GitHub MCP Automation
+This phase demonstrates automated GitHub operations using MCP tools:
+- Branch creation and management
+- Automated testing and coverage verification
+- Commit and push operations
+- Pull request creation and management
+- Integration with trunk-based development workflow
