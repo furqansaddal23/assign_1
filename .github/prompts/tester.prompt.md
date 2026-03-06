@@ -9,7 +9,7 @@ tools:
   - search
 ---
 
-## Follow instructions below: ##
+## Follow instructions below: ##(Phase 3)
 1. Write or improve JUnit tests for this Maven project.
 2. Run `mvn test`.
 3. If tests fail, debug and fix the issue.
