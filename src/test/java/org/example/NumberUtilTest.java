@@ -38,7 +38,7 @@ Output:
         assertThat(NumberUtils.add(null, asList(1, 2))).isNull();
     }
 
-    @Test 
+    @Test
     void constructor_canBeCalled(){
         assertThat(new NumberUtils()).isNotNull();
     }
@@ -97,7 +97,6 @@ Output:
                 .isInstanceOf(IllegalArgumentException.class);
     }
 
-    // tests created by the chat bot
 
     @Test
     void addremovesLeadingZerosInResult() {
