@@ -24,6 +24,12 @@ Output:
 - length = maxLen
 - length = maxLen + 1
 
+  -- Spec Testgen Coverage (March 6, 2026)
+  All 14 generated test cases from spec "null returns null; empty means 0; digits 0..9 only; carry; unequal lengths; no leading zeros unless [0]" are covered:
+  ✓ left_null, right_null, both_empty, left_empty, right_empty
+  ✓ digit_negative, digit_above_9, digit_at_lower_bound, digit_at_upper_bound
+  ✓ single_carry, carry_chain, unequal_lengths_no_carry, unequal_lengths_with_carry
+  ✓ leading_zeros_trim
     */
    
     @Test
@@ -32,7 +38,7 @@ Output:
         assertThat(NumberUtils.add(null, asList(1, 2))).isNull();
     }
 
-    @Test 
+    @Test
     void constructor_canBeCalled(){
         assertThat(new NumberUtils()).isNotNull();
     }
@@ -91,6 +97,7 @@ Output:
                 .isInstanceOf(IllegalArgumentException.class);
     }
 
+
     @Test
     void addremovesLeadingZerosInResult() {
         // left = [0,0,1], right = [0] -> [1]
@@ -118,6 +125,8 @@ Output:
         assertThat(NumberUtils.add(asList(), asList()))
                 .isEmpty();
     }
+
+    
 
     @Test
     void addRightDigitNegativeThrowsException() {
@@ -175,4 +184,4 @@ Output:
                 .containsExactly(1, 8);
     }
 
-}
+} 
